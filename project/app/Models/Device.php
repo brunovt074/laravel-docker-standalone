@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Device extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['brand', 'model'];
+
+    public function costumer(){
+
+        return $this -> belongsTo(Costumer::class);
+    }
+
 }
