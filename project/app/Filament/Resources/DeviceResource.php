@@ -31,13 +31,18 @@ class DeviceResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('costumer_id')
+                ->sortable()
+                -> searchable(),
+                Tables\Columns\TextColumn::make('brand')
+                ->sortable(),
+                Tables\Columns\TextColumn::make('model'),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                //Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
