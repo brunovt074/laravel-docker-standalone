@@ -26,10 +26,10 @@ class CostumerSeeder extends Seeder
                 'address' => $faker->address,
             ]);
 
-            // Generate random number of devices between 1 and 2
+            
             $numDevices = $faker->numberBetween(0, 2);
 
-            // Create devices for the current costumer
+            
             for ($j = 0; $j < $numDevices; $j++) {
                 $brand = $faker->company;
                 $model = $faker->word;
